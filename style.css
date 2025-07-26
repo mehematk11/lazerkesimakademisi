@@ -1,0 +1,131 @@
+/* Genel stil */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background: #111;
+  color: #eee;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: #222;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 2px solid #ff5722;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-style: italic;
+  margin: 5px 0 15px 0;
+  color: #ff9800;
+}
+
+/* Nav linkleri */
+nav a {
+  color: #ff5722;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Bölümler */
+section {
+  padding: 20px;
+  max-width: 900px;
+  margin: 20px auto;
+  background: #222;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #ff5722aa;
+}
+
+/* Galeri */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #ff5722aa;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid #ff5722;
+}
+
+.btn {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #e64a19;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  border-top: 2px solid #ff5722;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive (Mobil) */
+@media (max-width: 600px) {
+  .gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery img {
+    width: 90%;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
+
