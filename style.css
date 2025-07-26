@@ -1,131 +1,176 @@
-/* Genel stil */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* GENEL AYARLAR */
+* {
+  box-sizing: border-box;
   margin: 0;
-  background: #111;
-  color: #eee;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+body {
+  background: #f7f9fc;
   line-height: 1.6;
 }
 
-/* Header */
-header {
-  background: #222;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px;
+}
+
+/* HEADER */
+header {
+  background-color: #222;
+  color: white;
+  padding: 25px 0;
   text-align: center;
-  border-bottom: 2px solid #ff5722;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16);
 }
 
 header h1 {
-  margin: 0;
+  font-weight: 700;
   font-size: 2.5rem;
 }
 
 header p {
   font-style: italic;
-  margin: 5px 0 15px 0;
-  color: #ff9800;
+  color: #ddd;
+  margin-top: 10px;
+  font-size: 1.1rem;
 }
 
-/* Nav linkleri */
-nav a {
-  color: #ff5722;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
+/* NAV */
+nav {
+  background: #111;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
 }
 
-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Bölümler */
-section {
-  padding: 20px;
-  max-width: 900px;
-  margin: 20px auto;
-  background: #222;
-  border-radius: 8px;
-  box-shadow: 0 0 15px #ff5722aa;
-}
-
-/* Galeri */
-.gallery {
+nav ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
   justify-content: center;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 10px 0;
 }
 
-.gallery img {
-  width: 200px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #ff5722aa;
-  transition: transform 0.3s ease;
+nav ul li {
+  margin: 0 20px;
 }
 
-.gallery img:hover {
-  transform: scale(1.1);
-}
-
-/* Form */
-form {
-  display: flex;
-  flex-direction: column;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-input, textarea {
-  padding: 10px;
-  margin-bottom: 15px;
-  border: none;
-  border-radius: 5px;
-}
-
-input:focus, textarea:focus {
-  outline: 2px solid #ff5722;
-}
-
-.btn {
-  background: #ff5722;
+nav ul li a {
   color: white;
-  border: none;
-  padding: 12px;
-  font-size: 1rem;
-  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 6px 12px;
   border-radius: 5px;
-  transition: background 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-  background: #e64a19;
+nav ul li a:hover {
+  background-color: #f57c00;
+  color: white;
 }
 
-/* Footer */
-footer {
+/* ANA İÇERİK */
+main {
+  background: white;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+/* BAŞLIKLAR */
+h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #f57c00;
+  border-bottom: 3px solid #f57c00;
+  padding-bottom: 8px;
+  font-weight: 700;
+}
+
+/* PARAGRAFLAR */
+p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* FOTOĞRAFLAR */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* FİYAT BİLGİSİ */
+.price {
+  background-color: #f57c00;
+  color: white;
+  font-weight: 700;
+  font-size: 1.8rem;
   text-align: center;
-  padding: 15px;
-  background: #222;
-  border-top: 2px solid #ff5722;
-  margin-top: 30px;
-  font-size: 0.9rem;
-  color: #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 20px;
+  box-shadow: 0 6px 20px rgba(245, 124, 0, 0.4);
 }
 
-/* Responsive (Mobil) */
-@media (max-width: 600px) {
-  .gallery {
+/* İLETİŞİM BUTONU */
+.contact-btn {
+  display: inline-block;
+  background: #111;
+  color: white;
+  padding: 15px 30px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 30px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+  background-color: #f57c00;
+  color: white;
+  box-shadow: 0 12px 30px rgba(245, 124, 0, 0.6);
+}
+
+/* FOOTER */
+footer {
+  background: #222;
+  color: #aaa;
+  text-align: center;
+  padding: 20px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* RESPONSİVE - TABLET VE DAHA KÜÇÜK */
+@media (max-width: 768px) {
+  nav ul {
     flex-direction: column;
-    align-items: center;
   }
-
-  .gallery img {
-    width: 90%;
-  }
-
-  nav a {
-    display: block;
+  
+  nav ul li {
     margin: 10px 0;
   }
-}
 
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .price {
+    font-size: 1.5rem;
+  }
+  
+  main {
+    padding: 20px;
+  }
+}
